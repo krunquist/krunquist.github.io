@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
 
-    <title>Your personal website</title>
+    <title>Kinsey's Personal Website</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -56,7 +56,7 @@
         <div class="row align-items-center">
 
           <div class="col-6 col-xl-2">
-            <h1 class="mb-0 site-logo"><a href="#" class="h2 mb-0">Your Name</a></h1>
+            <h1 class="mb-0 site-logo"><a href="#" class="h2 mb-0">Kinsey Runquist</a></h1>
           </div>
 
           <div class="col-12 col-md-10 d-none d-xl-block">
@@ -86,19 +86,23 @@
         <div class="row">
           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
 
-            <img src="" alt="Image of you of something fun" class="img-fluid">
+            <img src="images/Me.jpg" alt="Image of you of something fun" class="img-fluid">
 
           </div>
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
             <div class="mb-4">
               <p>
-               Who you are
+               My name is Kinsey, and I am from Los Angeles, CA.
+                I attend the University of San Diego and am currently working at their coffee house.
               </p>
               <p>
-                Professional info
+                I am studying computer science with a concentration in cybersecurity and a minor in Spanish.
+                 I want to work in cybersecurity and have interned at both Southern California Edison and
+                 American Honda Motors. I am really interested in offensive cybersecurity like threat hunting,
+                 alert analysis and endpoint monitoring.
                </p>
                <p>
-                Hobbies
+                My hobbies include line dancing, traveling, reading, watching movies, crocheting, and bedazzling.
                </p>
 
 
@@ -123,23 +127,43 @@
         <div class="row">
           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
           
-            <img src="" alt="Image of your project" class="img-fluid">
+            <img src="images/birthdayparadox.png" alt="Image of your project" class="img-fluid">
           
           </div>
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
             <div class="mb-4">
-              <h3>Project Title</h3>
+              <h3>Birthday Paradox</h3>
               <p>
-               Motivation of the project
+               Overview:
+                The birthday paradox is the idea that the probability of two people in the same room
+                having the same birthday is more than half, provided that there is more than 23 people
+                in the room. This project implements the birthday paradox by running simulations to
+                calculate the probabilities.
               </p>
               <p>
-              Functional requirements/what the project does
+              Project Description:
+                This project calculates the percentage of people in the same room with the same birthday.
+                Based on the trial ran, it will generate a specific number of random birthdays and notes
+                how many people in the hypothetical room have the same birthday. It then calculates this
+                percentage and displays it to the user.
               </p>
               <p>
-              Project design
+              Implementation:
+                I was responsible for coding the files Birthday.java, Trial.java, BirthdayTest.java
+                and TrialTest.java. Using the enum Month in the file Month.java, Birthday.java randomly selects
+                one of the months in the enum, then randomly selects a day of the month that is within the specified
+                number of days assigned to the month in the enum. Trial.java builds on Birthday.java by instantiating
+                an empty ArrayList and will add randomly generated birthdays to it based on the number specified. It also
+                has the method hasDuplicateAfterIndex(int currentIndex) to check how many birthdays have a repeat after the
+                index specified by the method that calls it, hasRepeatBirthday(). Lastly, the files BirthdayTest.java and
+                TrialTest.java contain test cases using mocking to test the random birthday generator and make sure the
+                methods in the Birthday.java and Trial.java files are working as intended.
               </p>
               <p>
-              Implementation
+              What I Learned:
+                This project was a great review of java for me since I hadn't coded in it for a couple of months. The new
+                things I learned include clean code principles, how to use github to work with my partner, branching
+                and merging, and writing test cases using Mockito and seeing test coverage using Jacoco.
               </p>
 
 
@@ -171,14 +195,14 @@
           <div class="col-md-12 text-center">
             <p class="mb-0">
               <span class="icon-mail_outline d-block h4 text-primary"></span>
-              <span>email address</span>
+              <span>krunquist@sandiego.edu & kinsey@ecrede.com</span>
             </p>
           </div>
           
           <div class="col-md-12 text-center">
             <p class="mb-0">
               <span class="icon-graduation-cap d-block h4 text-primary"></span>
-              <a href="">Resume</a>
+              <a href="files/Kinsey%20Runquist%20Resume.docx.pdf">Click to See My Resume!</a>
             </p>
           </div>
         </div>
