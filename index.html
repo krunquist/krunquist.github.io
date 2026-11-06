@@ -174,6 +174,73 @@
           </div>
         </div>
       </div>
+      <div class="row mt-5">
+        <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+
+          <img src="images/elevator-uml.png" alt="UML class diagram of the elevator simulator" class="img-fluid">
+
+        </div>
+        <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+          <div class="mb-4">
+            <h3>Elevator Simulator</h3>
+            <p>
+              Overview:
+              This project simulates a building full of elevators. People request rides from one floor
+              to another, and the program decides which elevator should pick them up, moves every
+              elevator one floor at a time, and prints what the building looks like after each round.
+            </p>
+            <p>
+              Functional Requirements:
+              You choose the number of floors, which scheduler to use, and how many of each elevator
+              type to build: Standard, Freight, Penthouse, and Express. Each type follows different
+              rules. A Standard elevator will not turn around to pick someone up, a Freight elevator
+              carries one person at a time, a Penthouse elevator only runs between the ground and top
+              floors, and an Express elevator only serves the ground floor and the top half of the
+              building. Each round, a scheduler assigns at most one waiting call, and then every
+              elevator moves. The Simple scheduler gives the call to the first elevator that can take
+              it, while the Complex scheduler picks the elevator that can reach the pickup floor in the
+              fewest rounds. The simulation ends once every call is answered and every elevator is back
+              on the ground floor.
+            </p>
+            <p>
+              Design:
+              All four elevators move the same way and only differ in which calls they accept, so my
+              partner and I put the shared state and movement in an abstract Elevator class and let each
+              subclass decide only canService. The two schedulers share an abstract Scheduler for the
+              same reason. This keeps the design open to new elevator types without editing existing
+              code (Open-Closed), lets the schedulers work with any Elevator (Liskov and Dependency
+              Inversion), and uses abstraction, encapsulation, inheritance, and polymorphism instead of
+              type checks. We also replaced raw int arrays with a small Call class so no code has to
+              guess which number is the pickup floor. Some assumptions we made: Express rounds the top
+              half up, direction is stored as -1, 0, or 1, and the Complex scheduler adds one round to
+              an elevator's travel time if it has to reverse.
+            </p>
+            <p>
+              Implementation:
+              I was responsible for Call.java, StandardElevator.java, ExpressElevator.java, and
+              ComplexScheduler.java, plus the abstract Scheduler.java and their tests. I also moved
+              moveTo and the shared direction checks up into Elevator.java so the subclasses did not
+              repeat them. We followed test-driven development by writing one failing test, then the
+              code to pass it, then committing. We also used branches, pull requests, and code reviews
+              on every change. Code reviews allowed me to catch a few bugs, such as possible NullPointerExceptions
+              being thrown, or an accidental hard-coding of the building's height in Freight Elevator.
+              The code is on GitHub at https://github.com/usd-comp-305/comp-305-project-3-group-3.
+            </p>
+            <p>
+              What I Learned:
+              Doing this project through test-driven-development was a slower process, but it made sure the code
+              worked exactly the way we wanted it to, and catching any edge cases that might occur before it comes
+              up when a user is using our program. It also reinforced how important it is to really review the code
+              of your partner because one tiny mistake could cause the whole thing to break. By changing the design
+              of our project to include a Call class instead of passing in an array every time definitely made the
+              code cleaner, however, it also makes it so a lot of the files have to change. Making a good design
+              at the start is super important because it reduces the time spent refactoring code.
+            </p>
+
+          </div>
+
+        </div>
+      </div>
       
 
     </section>
